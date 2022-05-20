@@ -10,7 +10,7 @@ import java.util.Scanner;
 class Main{
     public static void sum(int n1,int n2){
         int sum=n1+n2;
-		System.out.println("Sum = "+sum);
+		System.out.println("The sum = "+sum);
     }
     public static void Odd_or_Even(int number){
         if(number % 2==0){
@@ -24,13 +24,10 @@ class Main{
         int reverse=0,reminder;
         while(number>0){
             reminder=number%10;
-            if(reminder==0){
-                System.out.print("0");
-            }
-            reverse=reverse*10+reminder;
             number=number/10;
+            System.out.print(reminder);
         }
-        System.out.println(reverse);
+        System.out.println();
     }
 	public static void main(String[] args) {
 	    //Add two numbers which user inputs
@@ -41,14 +38,17 @@ class Main{
 	    System.out.print("Enter second integer : ");
 	    int num2 = input.nextInt();
 	    //Calling sum function
+	    System.out.println("----------Sum----------");
 	    sum(num1,num2);
 	    //Calling Odd_or_Even function
+	    System.out.println("----------ODD OR EVEN----------");
 	    Odd_or_Even(num1);
 	    Odd_or_Even(num2);
 	    //Calling Reverse function
-	    System.out.println("The reverse of "+num1+" is ");
+	    System.out.println("----------REVERSE----------");
+	    System.out.print("The reverse of "+num1+" is ");
 	    reverse(num1);
-	    System.out.println("The reverse of "+num2+" is ");
+	    System.out.print("The reverse of "+num2+" is ");
 	    reverse(num2);
 	}
 }
