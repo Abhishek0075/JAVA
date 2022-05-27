@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main{
+public class Area{
     public static float Compute_area(int length,int breadth){
         float rect_area=length*breadth;
         return rect_area;
