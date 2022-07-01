@@ -12,9 +12,9 @@ public class student{
         mark3=inmark3;
         total=inmark1+inmark2+inmark3;
     }
-    public void display_details(){
+    public void display_details(int i){
         System.out.println();
-        System.out.println("===========Student=========");
+        System.out.println("===========Student "+i+"=========");
         System.out.println("Name : "+name);
         System.out.println("Roll no : "+roll_No);
         System.out.println("===========MARKS===========");
@@ -67,7 +67,7 @@ public class student{
             System.out.println();
         }
         for(int i=0;i<times;i++){
-            s1[i].display_details();
+            s1[i].display_details(i+1);
         }
     }
 }
