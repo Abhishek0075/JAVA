@@ -69,5 +69,6 @@ public class student{
         for(int i=0;i<times;i++){
             s1[i].display_details(i+1);
         }
+        input.close();
     }
 }

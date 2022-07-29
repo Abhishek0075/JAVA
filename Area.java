@@ -38,5 +38,6 @@ public class Area{
 	    }else{
 	        System.out.println("----------Thank you for using----------- ");
 	    }
+		input.close();
 	}
 }

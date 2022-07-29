@@ -20,8 +20,7 @@ class first{
         }
     }
     public static void reverse(int number){
-        int temp=number;
-        int reverse=0,reminder;
+        int reminder;
         while(number>0){
             reminder=number%10;
             number=number/10;
@@ -50,5 +49,6 @@ class first{
 	    reverse(num1);
 	    System.out.print("The reverse of "+num2+" is ");
 	    reverse(num2);
+		input.close();
 	}
 }
