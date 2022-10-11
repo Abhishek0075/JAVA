@@ -1,5 +1,4 @@
-import java.util.Scanner;
-public class Area{
+public class area{
     public static float Compute_area(int length,int breadth){
         float rect_area=length*breadth;
         return rect_area;
@@ -14,30 +13,36 @@ public class Area{
         return circle_area;
     }
 	public static void main(String[] args){
-	    int menu_selector,length,breadth;
-	    float radius;
-	    Scanner input=new Scanner(System.in);
-	    System.out.println("-----------Compute The Area-----------");
-	    System.out.print("* Press 1 for Rectangle \n* Press 2 for Square\n* Press 3 for Circle\n");
-	    System.out.print("* Press other key to Exit\n >>> ");
-	    menu_selector=input.nextInt();
-	    if(menu_selector==1){
-    	    System.out.print("Input the length and breadth of the rectangle : \n>>> ");
-    	    length=input.nextInt();
-    	    System.out.print(">>> ");
-    	    breadth=input.nextInt();
-    	    System.out.println("The area of the rectangle : "+Compute_area(length,breadth));
-	    }else if(menu_selector==2){
-    	    System.out.print("Input the length of the square : \n>>> ");
-    	    length=input.nextInt();
-    	    System.out.println("The area of the square : "+Compute_area(length));
-	    }else if(menu_selector==3){
-    	    System.out.print("Input the radius of the circle(in decimals) : \n>>> ");
-    	    radius=input.nextFloat();
-    	    System.out.println("The area of the circle : "+Compute_area(radius));
-	    }else{
-	        System.out.println("----------Thank you for using----------- ");
-	    }
-		input.close();
+		int menu_selector=Integer.parseInt(args[0]),length,breadth;
+		float radius;
+		System.out.println("-----------Compute The Area-----------");
+		System.out.print("* Press 1 for Rectangle \n* Press 2 for Square\n* Press 3 for Circle\n");
+		System.out.print("* Press other key to Exit\n\n ");
+		System.out.print(" >>> Selected ");
+		if(menu_selector==1){ //Rectangle
+
+			length=Integer.parseInt(args[1]);
+			breadth=Integer.parseInt(args[2]);
+			System.out.println("RECTANGLE");
+			System.out.print("Inputs : \n");
+			System.out.print(" >> Length : "+length+"\n");
+			System.out.println(" >> Breadth : "+breadth);
+			System.out.println("The area of the rectangle : "+Compute_area(length,breadth));
+		}else if(menu_selector==2){ //Square
+			length=Integer.parseInt(args[1]);
+			System.out.println("SQUARE");
+			System.out.print("Inputs : \n");
+			System.out.print(" >> Length : "+length+"\n");
+			System.out.println("The area of the square of length "+length+" : "+Compute_area(length));
+		}else if(menu_selector==3){ //Circle
+			radius=Float.parseFloat(args[1]);
+			System.out.println("CIRCLE");
+			System.out.print("Inputs : \n");
+			System.out.print(" >> Radius : "+radius+"\n");
+			System.out.println("The area of the circle : "+Compute_area(radius));
+		}else{
+			System.out.println("!! Wrong Option !!");
+		}
 	}
 }
+

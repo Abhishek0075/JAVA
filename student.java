@@ -4,7 +4,6 @@ public class student{
     String name;
     float mark1,mark2,mark3,total;
     public student(String in_name,int in_roll,float inmark1,float inmark2,float inmark3){
-        
         name=in_name;
         roll_No=in_roll;
         mark1=inmark1;
@@ -23,16 +22,16 @@ public class student{
         System.out.println("Science : "+mark3);
         System.out.println("===========================");
         if(mark1<50 || mark2<50 || mark3<50){
-            total=0;
+            total=0; 
         }
         System.out.println("Total marks : "+total);
         System.out.println("===========================");
         
     }
     public static void main(String[] args){
-        String a;
-        int b,times;
-        float m1,m2,m3;
+        String name;
+        int rollNo,times;
+        float mark1,mark2,mark3;
         student[] s1;
         Scanner input=new Scanner(System.in);
         System.out.print("Enter the number of students : ");
@@ -42,28 +41,28 @@ public class student{
         for(int i=0;i<times;i++){
             input.nextLine();
             System.out.print("Enter the name : ");
-            a=input.nextLine();
+            name=input.nextLine();
             System.out.print("Enter the Roll number : ");
-            b=input.nextInt();
+            rollNo=input.nextInt();
             System.out.print("Enter the marks of English : ");
-            m1=input.nextFloat();
-            while(m1>100){
+            mark1=input.nextFloat();
+            while(mark1>100){
                 System.out.print("!!! Entered marks invalid\nEnter the mark again : ");
-                m1=input.nextFloat();
+                mark1=input.nextFloat();
             }
             System.out.print("Enter the marks of Malayalam : ");
-            m2=input.nextFloat();
-            while(m2>100){
+            mark2=input.nextFloat();
+            while(mark2>100){
                 System.out.print("!!! Entered marks invalid\nEnter the mark again : ");
-                m2=input.nextFloat();
+                mark2=input.nextFloat();
             }
             System.out.print("Enter the marks of Science : ");
-            m3=input.nextFloat();
-            while(m3>100){
+            mark3=input.nextFloat();
+            while(mark3>100){
                 System.out.print("!!! Entered marks invalid\nEnter the mark again : ");
-                m3=input.nextFloat();
-            }
-            s1[i]=new student(a,b,m1,m2,m3);
+                mark3=input.nextFloat();
+            } 
+            s1[i]=new student(name,rollNo,mark1,mark2,mark3);
             System.out.println();
         }
         for(int i=0;i<times;i++){
