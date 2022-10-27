@@ -16,6 +16,5 @@ public class reverseNumber {
         String revert=reverse(num);
         System.out.println("The reverse of the number "+num+" : "+revert);
         input.close();
-        
     }
 }

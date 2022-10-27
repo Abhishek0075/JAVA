@@ -3,7 +3,7 @@ public class towerOfHanoi{
         int nDisks = 3;
         System.out.print("    Tower of Hanoi");
         System.out.println(" ");
-        doTowers(nDisks, 'A', 'B', 'C');
+        doTowers(nDisks, 'A', 'B', 'C') ;
     }
     public static void doTowers(int topN, char from, char inter, char to){
         if (topN == 1){
